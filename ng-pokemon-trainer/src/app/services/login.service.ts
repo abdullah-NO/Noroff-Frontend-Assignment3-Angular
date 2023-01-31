@@ -49,7 +49,7 @@ export class LoginService {
 
     const headers = new HttpHeaders({
     "Content-Type": "application/json",
-    "x-api-key": "apiKey"
+    "x-api-key": apiKey
     });
 
 
@@ -58,6 +58,5 @@ export class LoginService {
 
   } // IF User || Created User -> Store user
 
- 
 
 }
