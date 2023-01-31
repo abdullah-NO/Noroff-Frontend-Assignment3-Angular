@@ -26,6 +26,7 @@ export class LoginService {
           return of(trainer);
         })
       )
+      
   }
   //Login 
   
