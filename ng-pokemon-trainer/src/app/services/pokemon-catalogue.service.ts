@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { finalize } from 'rxjs';
 import { Pokemon } from 'src/app/models/pokemon.model'
 import { PokemonResults } from 'src/app/models/PokemonResults';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/environment';
 
 const { apiPokemons } = environment // = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
 
