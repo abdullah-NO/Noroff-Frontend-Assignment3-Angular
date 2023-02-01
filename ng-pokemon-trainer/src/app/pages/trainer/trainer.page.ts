@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Pokemon } from 'src/app/models/pokemon';
-import { PokemonCatalogueService } from 'src/services/pokemon-catalogue.service';
+import { Pokemon } from 'src/app/models/pokemon.model';
+import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.service';
 
 @Component({
   selector: 'app-trainer',
