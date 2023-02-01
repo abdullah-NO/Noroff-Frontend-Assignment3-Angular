@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { finalize } from 'rxjs';
-import { Pokemon } from 'src/app/models/pokemon';
+import { Pokemon } from 'src/app/models/pokemon.model'
 import { PokemonResults } from 'src/app/models/PokemonResults';
 
 const environment = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
@@ -16,6 +16,7 @@ export class PokemonCatalogueService {
   private _loading: boolean = false;
 
   get pokemon(): Pokemon[] {
+
     return this._pokemon_list
   }
 
@@ -34,6 +35,8 @@ export class PokemonCatalogueService {
     this.http.get<PokemonResults>(environment).pipe(finalize(() => {this._loading = false})).subscribe({
       next: (pokemon_list:PokemonResults) => {
         this._pokemon_list = pokemon_list.results;
+        this._pokemon_list.forEach(pokemon => pokemon.img=
+          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${(pokemon.url.split('/').slice(-2, -1).pop())}.png`)
       },
       error: (error: HttpErrorResponse) => {
         this._error = error.message
