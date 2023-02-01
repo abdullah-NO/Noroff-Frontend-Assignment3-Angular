@@ -29,7 +29,7 @@ export class PokemonCatalogueService {
 
   constructor(private readonly http: HttpClient) {}
 
-  public findPokemonAndTheirImage(limit: number, offset: number): void {
+  public findPokemonAndSetImage(limit: number, offset: number): void {
     this._loading = true;
     this.http
       .get<PokemonResponse>(apiPokemons + `?limit=${limit}&offset=${offset}`)
@@ -42,7 +42,7 @@ export class PokemonCatalogueService {
         next: (pokemon_list: PokemonResponse) => {
           this._pokemon_list = pokemon_list.results;
 
-          // fetch image
+          // set image
           this._pokemon_list.forEach((pokemon) => {
             const id = pokemon.url.split('/').slice(-2, -1).pop();
             pokemon.img = `${apiPokemonImages + id}.png`;
