@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Trainer } from 'src/app/models/trainer.model';
 import { LoginService } from 'src/app/services/login.service';
+import { TrainerService } from 'src/app/services/trainer.service';
 
 
 @Component({
@@ -9,9 +11,13 @@ import { LoginService } from 'src/app/services/login.service';
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']
 })
-export class LoginFormComponent {
+export class LoginFormComponent 
+{
+  @Output() login: EventEmitter<void> = new EventEmitter();
+
   //DI Dependecy injection
-  constructor(private readonly loginService: LoginService) {}
+  constructor(private readonly trainerService: TrainerService,
+              private readonly loginService: LoginService) {}
   public loginSubmit(loginForm: NgForm): void 
   {
     //get username
@@ -22,11 +28,13 @@ export class LoginFormComponent {
       ({
         next: (trainer: Trainer) => 
         {
-
+          // redirect to catalogue page.
+          this.trainerService.trainer = trainer;
+          this.login.emit();
         },
         error: () =>
         {
-
+          // handles it locally
         }
       })  
   }

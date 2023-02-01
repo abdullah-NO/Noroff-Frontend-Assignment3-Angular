@@ -6,7 +6,7 @@ public static storageSave<T>(key:string, value: T): void {
     
 }
 
-public static storageRead<T>(key:string): T | null 
+public static storageRead<T>(key:string): T | undefined 
 {
     const storedValue = sessionStorage.getItem(key);
     try
@@ -15,12 +15,12 @@ public static storageRead<T>(key:string): T | null
         {
             return JSON.parse(storedValue) as T;
         }
-            return null; 
+            return undefined; 
     }
     catch(e)
     {
         sessionStorage.removeItem(key);
-        return null;
+        return undefined;
     }
 }   
 }
