@@ -31,9 +31,9 @@ export class PokemonCatalogueService {
 
   constructor(private readonly http: HttpClient) {}
   
-  public findPokemon(): void {
+  public findPokemon(limit:number, offset:number): void {
     this._loading = true;
-    this.http.get<PokemonResults>(apiPokemons + "?limit=10&offset=0").pipe(finalize(() => {this._loading = false})).subscribe({
+    this.http.get<PokemonResults>(apiPokemons + `?limit=${limit}&offset=${offset}`).pipe(finalize(() => {this._loading = false})).subscribe({
       next: (pokemon_list:PokemonResults) => {
         this._pokemon_list = pokemon_list.results;
         this._pokemon_list.forEach(pokemon => pokemon.img=

@@ -26,7 +26,7 @@ export class TrainerPage {
   ){}
 
   ngOnInit(): void {
-    this.pokemonCatalogueService.findPokemon()
+    this.pokemonCatalogueService.findPokemon(10, 10)
   }
 
 }
