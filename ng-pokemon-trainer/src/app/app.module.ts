@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { LoginPage } from './pages/login/login.page';
@@ -9,8 +10,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { Pokemon } from './components/pokemon/pokemon.component';
 import { HttpClientModule } from "@angular/common/http";
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { FormsModule } from '@angular/forms';
 
-@NgModule({
+@NgModule({ //components
   declarations: [
     AppComponent,
     LoginPage,
@@ -18,11 +21,13 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
     CataloguePage,
     Pokemon,
     PokemonListComponent
+    LoginFormComponent
   ],
-  imports: [
+  imports: [// modules
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
