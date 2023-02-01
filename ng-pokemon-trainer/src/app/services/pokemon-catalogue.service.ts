@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { finalize } from 'rxjs';
 import { Pokemon } from 'src/app/models/pokemon.model'
-import { PokemonResults } from 'src/app/models/PokemonResults';
+import { PokemonResponse } from 'src/app/models/PokemonResponse';
 import { environment } from 'src/environments/environment';
 
 const { apiPokemons } = environment // = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
@@ -33,8 +33,8 @@ export class PokemonCatalogueService {
   
   public findPokemon(limit:number, offset:number): void {
     this._loading = true;
-    this.http.get<PokemonResults>(apiPokemons + `?limit=${limit}&offset=${offset}`).pipe(finalize(() => {this._loading = false})).subscribe({
-      next: (pokemon_list:PokemonResults) => {
+    this.http.get<PokemonResponse>(apiPokemons + `?limit=${limit}&offset=${offset}`).pipe(finalize(() => {this._loading = false})).subscribe({
+      next: (pokemon_list:PokemonResponse) => {
         this._pokemon_list = pokemon_list.results;
         this._pokemon_list.forEach(pokemon => pokemon.img=
           `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${(pokemon.url.split('/').slice(-2, -1).pop())}.png`)
