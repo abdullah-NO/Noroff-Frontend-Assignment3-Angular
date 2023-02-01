@@ -1,6 +1,6 @@
-<ul>
-    <li *ngFor="let pokeman of pokemon">
-        <span>{{ pokeman.name }}</span>
+<ul class="pokeCatalogue">
+    <li class="pokeContainer"*ngFor="let pokeman of pokemon">
+        <span>{{ pokeman.name.toUpperCase() }}</span>
         <img [src]="pokeman.img" alt="problemo">
     </li>
-</ul>>
+</ul>
