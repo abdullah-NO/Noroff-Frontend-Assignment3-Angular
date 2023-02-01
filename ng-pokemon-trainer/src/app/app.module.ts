@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
     TrainerPage,
     CataloguePage,
     Pokemon,
-    PokemonListComponent
+    PokemonListComponent,
     LoginFormComponent
   ],
   imports: [// modules
