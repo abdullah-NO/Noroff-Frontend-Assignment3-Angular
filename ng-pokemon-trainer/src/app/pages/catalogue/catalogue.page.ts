@@ -5,8 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './catalogue.page.html',
   styleUrls: ['./catalogue.page.css']
 })
-export class CataloguePage {
-
-
+export class CataloguePage 
+{
 
 }

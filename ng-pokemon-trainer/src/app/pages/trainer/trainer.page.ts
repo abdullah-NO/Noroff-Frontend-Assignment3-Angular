@@ -8,6 +8,7 @@ import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.serv
   styleUrls: ['./trainer.page.css'],
 })
 export class TrainerPage {
+  
   get pokemon(): Pokemon[] {
     return this.pokemonCatalogueService.pokemon;
   }
