@@ -5,7 +5,7 @@ import { Pokemon } from 'src/app/models/pokemon.model'
 import { PokemonResponse } from 'src/app/models/PokemonResponse';
 import { environment } from 'src/environments/environment';
 
-const { apiPokemons } = environment // = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
+const { apiPokemons, apiPokemonImages } = environment // = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
 
 @Injectable({
   providedIn: 'root'
@@ -31,13 +31,13 @@ export class PokemonCatalogueService {
 
   constructor(private readonly http: HttpClient) {}
   
-  public findPokemon(limit:number, offset:number): void {
+  public findPokemonAndTheirImage(limit:number, offset:number): void {
     this._loading = true;
     this.http.get<PokemonResponse>(apiPokemons + `?limit=${limit}&offset=${offset}`).pipe(finalize(() => {this._loading = false})).subscribe({
       next: (pokemon_list:PokemonResponse) => {
         this._pokemon_list = pokemon_list.results;
         this._pokemon_list.forEach(pokemon => pokemon.img=
-          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${(pokemon.url.split('/').slice(-2, -1).pop())}.png`)
+          `${apiPokemonImages + (pokemon.url.split('/').slice(-2, -1).pop())}.png`)
       },
       error: (error: HttpErrorResponse) => {
         this._error = error.message
