@@ -1,1 +1,4 @@
-<p>trainer works!</p>
+<main>
+    <p *ngIf="loading"></p>
+    <app-pokemon-list [pokemon]="pokemon"></app-pokemon-list>
+</main>

@@ -7,6 +7,9 @@ import { LoginPage } from './pages/login/login.page';
 import { TrainerPage } from './pages/trainer/trainer.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { AppRoutingModule } from './app-routing.module';
+import { Pokemon } from './components/pokemon/pokemon.component';
+import { HttpClientModule } from "@angular/common/http";
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
 
@@ -16,6 +19,8 @@ import { FormsModule } from '@angular/forms';
     LoginPage,
     TrainerPage,
     CataloguePage,
+    Pokemon,
+    PokemonListComponent
     LoginFormComponent
   ],
   imports: [// modules
