@@ -47,8 +47,7 @@ export class PokemonCatalogueService {
           // set image
           this._pokemon_list.forEach((pokemon) => {
             const id = pokemon.url.split('/').slice(-2, -1).pop();
-            //quickfix with the slash needs to put it into apiPokemonImages. check if git pull is updated already for this fix
-            pokemon.img = `${apiPokemonImages + "/" + id}.png`;
+            pokemon.img = `${apiPokemonImages + id}.png`;
           });
 
           // saving pokemons to sessionStorage
