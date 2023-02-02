@@ -1,10 +1,19 @@
-# NgPokemonTrainer
+# The project
+The application shows a catalogue of catchable pokemon and the trainers current pokemon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+# NgPokemonTrainer
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3. 
+## prerequisites
+*you need to have node installed from https://nodejs.org/en/ and run `npm install`
+*you need to download angular cli with `npm install -g @angular/cli`
+*you need to have git installed https://git-scm.com/download/win
 
 ## Development server
-
+*run npm install after cloning to include dependecies, this will also make sure that ng commands will run properly.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+# Production server
+$$ coming soon $$
 
 ## Code scaffolding
 
