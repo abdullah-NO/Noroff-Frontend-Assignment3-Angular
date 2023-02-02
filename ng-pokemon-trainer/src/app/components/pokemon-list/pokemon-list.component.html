@@ -1,6 +1,4 @@
 <ul class="pokeCatalogue">
-    <li class="pokeContainer"*ngFor="let pokeman of pokemon">
-        <img [src]="pokeman.img" [alt]="pokeman.name">
-        <span>{{ pokeman.name.toUpperCase() }}</span>
-    </li>
+    <app-pokemon-list-item class="pokeContainer" *ngFor="let pokeman of pokemon" [pokemon]="pokeman">  
+    </app-pokemon-list-item>
 </ul>

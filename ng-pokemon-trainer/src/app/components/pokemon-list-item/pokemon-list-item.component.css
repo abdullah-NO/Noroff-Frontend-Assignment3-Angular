@@ -1,0 +1,16 @@
+img{
+    padding: 0px;
+    height: 180px;
+    width: 180px;
+}
+
+div {
+    color: #2A75BB;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+}
