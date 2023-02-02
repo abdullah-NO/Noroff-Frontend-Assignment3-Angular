@@ -12,6 +12,7 @@ import { TrainerPage } from './pages/trainer/trainer.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { Pokemon } from './components/pokemon/pokemon.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { PokemonTrainerListComponent } from './components/pokemon-trainer-list/pokemon-trainer-list.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
 import { CollectPokemonButtonComponent } from './components/collect-pokemon-button/collect-pokemon-button.component';
@@ -25,6 +26,7 @@ import { CollectPokemonButtonComponent } from './components/collect-pokemon-butt
     CataloguePage,
     Pokemon,
     PokemonListComponent,
+    PokemonTrainerListComponent,
     LoginFormComponent,
     PokemonListItemComponent,
     CollectPokemonButtonComponent,
