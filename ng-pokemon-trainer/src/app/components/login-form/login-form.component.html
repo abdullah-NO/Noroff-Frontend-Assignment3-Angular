@@ -1,17 +1,12 @@
-<div>
-    <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
-        <fieldset class ="mb-3">
-            <label  for="username" class="block">insert name</label>
-            <input type="text"
-             ngModel
-             #username="ngModel"
-             name="username" 
-             id="username" 
-             class="border border-slate-300" 
-             placeholder="ash"/>
-        </fieldset>
-        <button type="submit">Login</button>
-    </form>
-    <p *ngIf="loading">Loading...</p>
-</div>
-
+<form class=loginForm #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
+    <fieldset class ="mb-3">
+        <input type="text"
+         ngModel
+         #username="ngModel"
+         name="username" 
+         id="username" 
+         class="border border-slate-300" 
+         placeholder="Type your username..."/>
+    </fieldset>
+    <button class="submitButton" type="submit">Login</button>
+</form>
