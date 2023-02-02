@@ -37,7 +37,6 @@ export class LoginService {
     .pipe(
       map((response:Trainer[]) => response.pop())
     )
-
   }
 
   // IF NOT user -create User
