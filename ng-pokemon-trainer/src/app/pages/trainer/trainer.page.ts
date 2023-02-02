@@ -14,7 +14,7 @@ export class TrainerPage {
   get pokemon(): Pokemon[] {
     let sessionTrainer: Trainer = StorageUtil.storageRead("trainer")||{id:-1, username: "", pokemon: []}
     console.log(sessionTrainer)
-    return this.pokemonCatalogueService.pokemon
+    return this.pokemonCatalogueService.pokemon.filter(pokemonInstance => sessionTrainer.pokemon.includes(pokemonInstance.name))
   }
 
   get loading(): boolean {
