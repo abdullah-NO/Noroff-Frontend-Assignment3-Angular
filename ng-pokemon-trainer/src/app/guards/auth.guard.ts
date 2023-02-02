@@ -7,7 +7,7 @@ import {
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { TrainerService } from '../services/trainer.session-storage.service';
+import { TrainerSessionStorageService } from '../services/trainer-session-storage.service';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +15,7 @@ import { TrainerService } from '../services/trainer.session-storage.service';
 export class AuthGuard implements CanActivate {
   constructor(
     private readonly router: Router,
-    private readonly trainerService: TrainerService
+    private readonly trainerService: TrainerSessionStorageService
   ) {}
   canActivate(
     route: ActivatedRouteSnapshot,

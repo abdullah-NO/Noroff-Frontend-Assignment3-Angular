@@ -51,7 +51,10 @@ export class PokemonCatalogueService {
           });
 
           // saving pokemons to sessionStorage
-          StorageUtil.sessionStorageSave(StorageKeys.pokemonList, this._pokemon_list!);
+          StorageUtil.sessionStorageSave(
+            StorageKeys.pokemonList,
+            this._pokemon_list!
+          );
         },
         error: (error: HttpErrorResponse) => {
           this._error = error.message;

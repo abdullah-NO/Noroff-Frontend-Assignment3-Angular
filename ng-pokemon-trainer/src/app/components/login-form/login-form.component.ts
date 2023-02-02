@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Trainer } from 'src/app/models/trainer.model';
 import { LoginService } from 'src/app/services/login.service';
-import { TrainerService } from 'src/app/services/trainer.session-storage.service';
+import { TrainerSessionStorageService } from 'src/app/services/trainer-session-storage.service';
 import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.service';
 
 @Component({
@@ -22,7 +22,7 @@ export class LoginFormComponent {
 
   //DI Dependecy injection
   constructor(
-    private readonly trainerService: TrainerService,
+    private readonly trainerService: TrainerSessionStorageService,
     private readonly loginService: LoginService,
     private readonly pokemonCatalogueService: PokemonCatalogueService
   ) {}
