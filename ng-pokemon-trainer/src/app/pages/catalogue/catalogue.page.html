@@ -7,5 +7,11 @@
             <h3 class ="pageHeader">Trainer</h3>
         </a>   
     </div>
-    <app-pokemon-list></app-pokemon-list>
+    <ng-container *ngIf="pokemonList !== undefined; then list; else noPokemon"></ng-container>
+    <ng-template #list>
+        <app-pokemon-list *ngIf="pokemonList !== undefined" [pokemon]="pokemonList"></app-pokemon-list>
+    </ng-template >
+    <ng-template #noPokemon>
+        <p>Pokemon not found</p>
+    </ng-template>
 </main>

@@ -1,12 +1,12 @@
 export class StorageUtil
 {
     
-public static storageSave<T>(key:string, value: T): void {
+public static sessionStorageSave<T>(key:string, value: T): void {
     sessionStorage.setItem(key,JSON.stringify(value));
     
 }
 
-public static storageRead<T>(key:string): T | undefined 
+public static sessionStorageRead<T>(key:string): T | undefined 
 {
     const storedValue = sessionStorage.getItem(key);
     try
@@ -22,5 +22,5 @@ public static storageRead<T>(key:string): T | undefined
         sessionStorage.removeItem(key);
         return undefined;
     }
-}   
+}
 }

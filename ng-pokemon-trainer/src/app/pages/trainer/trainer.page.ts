@@ -12,7 +12,7 @@ import { Trainer } from 'src/app/models/trainer.model';
 export class TrainerPage {
   
   get pokemon(): Pokemon[] {
-    let sessionTrainer: Trainer = StorageUtil.storageRead("trainer")||{id:-1, username: "", pokemon: []}
+    let sessionTrainer: Trainer = StorageUtil.sessionStorageRead("trainer")||{id:-1, username: "", pokemon: []}
     console.log(sessionTrainer)
     return this.pokemonCatalogueService.pokemon.filter(pokemonInstance => sessionTrainer.pokemon.includes(pokemonInstance.name))
   }
@@ -29,7 +29,7 @@ export class TrainerPage {
     private readonly pokemonCatalogueService: PokemonCatalogueService
   ) {}
 
-  ngOnInit(): void {
-    this.pokemonCatalogueService.findPokemonAndSetImage(150, 0);
-  }
+  // ngOnInit(): void {
+  //   this.pokemonCatalogueService.findPokemonAndSetImage(150, 0);
+  // }
 }

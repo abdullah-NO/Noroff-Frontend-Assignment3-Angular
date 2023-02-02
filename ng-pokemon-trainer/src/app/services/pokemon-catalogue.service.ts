@@ -4,6 +4,8 @@ import { finalize } from 'rxjs';
 import { Pokemon } from 'src/app/models/pokemon.model';
 import { PokemonResponse } from 'src/app/models/PokemonResponse';
 import { environment } from 'src/environments/environment';
+import { StorageUtil } from '../utils/storage.util';
+import { StorageKeys } from '../enums/storage-keys.enum';
 
 const { apiPokemons, apiPokemonImages } = environment; // = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
 
@@ -47,6 +49,9 @@ export class PokemonCatalogueService {
             const id = pokemon.url.split('/').slice(-2, -1).pop();
             pokemon.img = `${apiPokemonImages + id}.png`;
           });
+
+          // saving pokemons to sessionStorage
+          StorageUtil.sessionStorageSave(StorageKeys.pokemonList, this._pokemon_list!);
         },
         error: (error: HttpErrorResponse) => {
           this._error = error.message;

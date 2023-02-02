@@ -9,6 +9,6 @@ import { StorageUtil } from 'src/app/utils/storage.util';
 })
 export class CataloguePage {
   get pokemonList(): Pokemon[] | undefined {
-    return StorageUtil.storageRead<Pokemon[]>('pokemonList');
+    return StorageUtil.sessionStorageRead<Pokemon[]>('pokemonList');
   }
 }

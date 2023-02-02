@@ -13,14 +13,15 @@ export class TrainerService
   {
     return this._trainer;
   }
+  
   set trainer(trainer: Trainer | undefined)
   {
-    StorageUtil.storageSave<Trainer>(StorageKeys.Trainer, trainer!);
+    StorageUtil.sessionStorageSave<Trainer>(StorageKeys.Trainer, trainer!);
     this._trainer = trainer;
   }
 
   constructor() 
   {
-    this._trainer = StorageUtil.storageRead<Trainer>(StorageKeys.Trainer)
+    this._trainer = StorageUtil.sessionStorageRead<Trainer>(StorageKeys.Trainer)
   }
 }
