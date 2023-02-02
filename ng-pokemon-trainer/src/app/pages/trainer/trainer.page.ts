@@ -17,15 +17,5 @@ export class TrainerPage {
     return pokemonCatalogue.filter(pokemonInstance => sessionTrainer.pokemon.includes(pokemonInstance.name))
   }
 
-  get loading(): boolean {
-    return this.pokemonCatalogueService.loading;
-  }
-
-  get error(): string {
-    return this.pokemonCatalogueService.error;
-  }
-
-  constructor(
-    private readonly pokemonCatalogueService: PokemonCatalogueService
-  ) {}
+  constructor() {}
 }

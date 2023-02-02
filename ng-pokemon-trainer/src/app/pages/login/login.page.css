@@ -37,3 +37,8 @@
     border-color: black;
     border-width: 6px;
 }
+
+.loading{
+    color: black;
+    font-size: 12;
+}
