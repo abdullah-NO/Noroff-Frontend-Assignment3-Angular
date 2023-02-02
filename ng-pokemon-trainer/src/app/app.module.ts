@@ -12,6 +12,7 @@ import { TrainerPage } from './pages/trainer/trainer.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { Pokemon } from './components/pokemon/pokemon.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { PokemonTrainerListComponent } from './components/pokemon-trainer-list/pokemon-trainer-list.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({ //components
@@ -22,6 +23,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     CataloguePage,
     Pokemon,
     PokemonListComponent,
+    PokemonTrainerListComponent,
     LoginFormComponent
   ],
   imports: [// modules

@@ -47,7 +47,7 @@ export class PokemonCatalogueService {
           // set image
           this._pokemon_list.forEach((pokemon) => {
             const id = pokemon.url.split('/').slice(-2, -1).pop();
-            pokemon.img = `${apiPokemonImages + id}.png`;
+            pokemon.img = `${apiPokemonImages + id}.gif`;
           });
 
           // saving pokemons to sessionStorage
