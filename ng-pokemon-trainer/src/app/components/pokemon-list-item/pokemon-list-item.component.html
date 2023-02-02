@@ -1,0 +1,5 @@
+<li *ngIf="pokemon">
+    <img [src]="pokemon.img" [alt]="pokemon.name">
+    <div>{{ pokemon.name.toUpperCase() }}</div>
+    <app-collect-pokemon-button></app-collect-pokemon-button>
+</li>
