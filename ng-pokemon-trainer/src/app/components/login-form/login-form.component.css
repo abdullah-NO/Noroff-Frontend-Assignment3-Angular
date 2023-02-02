@@ -1,0 +1,47 @@
+.mb-3{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height:50px;
+    width: 60%;
+}
+
+input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #dddddd;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.loginForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    width: max(30vw, 300px);
+    margin: 0px;
+    background-color: #333333;
+    border-color: black;
+    border-width: 0px 6px 0px 6px;
+    gap:10px;
+}
+
+.submitButton{
+    border-radius: 100px;
+    background-color: #333333;
+    height: 35px;
+    width: 60px;
+    color: #dddddd;
+    border-color: #dddddd;
+    border-width: 2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.submitButton:hover{
+    background-color: #dddddd;
+    color: black;
+}
