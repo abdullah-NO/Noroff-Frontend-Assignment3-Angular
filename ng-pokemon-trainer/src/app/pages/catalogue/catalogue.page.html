@@ -1,4 +1,12 @@
-<main>
+<main class ="page">
+    <div class="pageHeaderContainer">
+        <div class = "pageTitle">
+            <h3 class="pageHeader">Catalogue</h3>
+        </div>
+        <a routerLink="/trainer" class ="selectButton">
+            <h3 class ="pageHeader">Trainer</h3>
+        </a>   
+    </div>
     <ng-container *ngIf="pokemonList !== undefined; then list; else noPokemon"></ng-container>
     <ng-template #list>
         <app-pokemon-list *ngIf="pokemonList !== undefined" [pokemon]="pokemonList"></app-pokemon-list>
