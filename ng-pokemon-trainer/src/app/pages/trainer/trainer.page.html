@@ -1,4 +1,12 @@
-<main>
+<main class="page">
+    <div class="pageHeaderContainer">
+        <a routerLink="/catalogue" class ="selectButton">
+            <h3 class ="pageHeader">Catalogue</h3>
+        </a>
+        <div class = "pageTitle">
+            <h3 class="pageHeader">Trainer</h3>
+        </div>
+    </div>
     <p *ngIf="loading"></p>
     <app-pokemon-list [pokemon]="pokemon"></app-pokemon-list>
 </main>
