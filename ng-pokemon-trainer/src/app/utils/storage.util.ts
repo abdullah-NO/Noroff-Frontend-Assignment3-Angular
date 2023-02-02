@@ -23,5 +23,4 @@ public static sessionStorageRead<T>(key:string): T | undefined
         return undefined;
     }
 }
-   
 }

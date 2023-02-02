@@ -25,7 +25,9 @@ export class TrainerPage {
     private readonly pokemonCatalogueService: PokemonCatalogueService
   ) {}
 
-  ngOnInit(): void {
-    this.pokemonCatalogueService.findPokemonAndSetImage(10, 10);
-  }
+  
+  // needs testing
+  // ngOnInit(): void {
+  //   this.pokemonCatalogueService.findPokemonAndSetImage(10, 10);
+  // }
 }
