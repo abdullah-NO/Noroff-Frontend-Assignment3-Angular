@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CollectPokemonButtonComponent } from './collect-pokemon-button.component';
 
-describe('AddPokemonButtonComponent', () => {
+describe('CollectPokemonButtonComponent', () => {
   let component: CollectPokemonButtonComponent;
   let fixture: ComponentFixture<CollectPokemonButtonComponent>;
 
