@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon.model';
 import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.service';
+import { StorageUtil } from 'src/app/utils/storage.util';
+import { Trainer } from 'src/app/models/trainer.model';
 
 @Component({
   selector: 'app-trainer',
@@ -10,7 +12,9 @@ import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.serv
 export class TrainerPage {
   
   get pokemon(): Pokemon[] {
-    return this.pokemonCatalogueService.pokemon;
+    let sessionTrainer: Trainer = StorageUtil.sessionStorageRead("trainer")||{id:-1, username: "", pokemon: []}
+    console.log(sessionTrainer)
+    return this.pokemonCatalogueService.pokemon.filter(pokemonInstance => sessionTrainer.pokemon.includes(pokemonInstance.name))
   }
 
   get loading(): boolean {
@@ -25,9 +29,7 @@ export class TrainerPage {
     private readonly pokemonCatalogueService: PokemonCatalogueService
   ) {}
 
-  
-  // needs testing
   // ngOnInit(): void {
-  //   this.pokemonCatalogueService.findPokemonAndSetImage(10, 10);
+  //   this.pokemonCatalogueService.findPokemonAndSetImage(150, 0);
   // }
 }
