@@ -14,8 +14,16 @@ import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.serv
 export class LoginFormComponent {
   private _loading: boolean = false;
 
-  get loading(): boolean {
+  get trainerLoading(): boolean {
     return this._loading;
+  }
+
+  get catalogueLoading(): boolean {
+    return this.pokemonCatalogueService.loading;
+  }
+
+  get notLoading(): boolean {
+    return !(this.pokemonCatalogueService.loading || this._loading)
   }
 
   @Output() login: EventEmitter<void> = new EventEmitter();

@@ -11,5 +11,9 @@ export class PokemonTrainerListComponent implements OnInit {
 
   constructor() {}
 
+  onReleasePokemon(){
+    alert('Button working')
+  }
+
   ngOnInit(): void {}
 }

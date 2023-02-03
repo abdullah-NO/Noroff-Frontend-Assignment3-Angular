@@ -1,12 +1,14 @@
 <form class=loginForm #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
     <fieldset class ="mb-3">
-        <input type="text"
+        <input *ngIf="notLoading" type="text"
          ngModel
          #username="ngModel"
          name="username" 
          id="username" 
          class="border border-slate-300" 
          placeholder="Type your username..."/>
+        <p class="loading" *ngIf="catalogueLoading">Loading pokemon...</p>
+        <p class="loading" *ngIf="trainerLoading">Loading trainer data...</p>
     </fieldset>
     <button class="submitButton" type="submit">Login</button>
 </form>
