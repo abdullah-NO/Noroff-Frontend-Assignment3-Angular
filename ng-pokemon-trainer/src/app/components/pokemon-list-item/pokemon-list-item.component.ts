@@ -17,4 +17,8 @@ export class PokemonListItemComponent {
       trainer?.pokemon.find((pokemonName) => pokemonName === this.pokemon?.name)
     );
   }
+
+  get imagePath(){
+    return "../../../assets/Images/pokeball.png"
+  }
 }

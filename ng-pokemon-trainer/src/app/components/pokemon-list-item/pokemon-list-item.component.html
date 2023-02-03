@@ -1,6 +1,6 @@
 <li *ngIf="pokemon">
     <img class="img-pokemon" *ngIf="!collected()" [src]="pokemon.img" [alt]="pokemon.name">
-    <img class="img-pokeball" *ngIf="collected()" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="pokeball">
+    <img class="img-pokeball" *ngIf="collected()" [src]="imagePath" alt="pokeball">
     <div>{{ pokemon.name.toUpperCase() }}</div>
     <app-collect-pokemon-button *ngIf="!collected()" [pokemonName]="pokemon.name"></app-collect-pokemon-button>
 </li>
