@@ -16,5 +16,9 @@ export class TrainerPage {
     return pokemonCatalogue.filter(pokemonInstance => sessionTrainer.pokemon.includes(pokemonInstance.name))
   }
 
+  removeTrainer(){
+    StorageUtil.sessionStorageRemove()
+  }
+
   constructor() {}
 }

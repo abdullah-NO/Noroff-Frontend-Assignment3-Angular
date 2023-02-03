@@ -23,4 +23,8 @@ public static sessionStorageRead<T>(key:string): T | undefined
         return undefined;
     }
 }
+
+public static sessionStorageRemove<T>(){
+    sessionStorage.removeItem("trainer")
+}
 }
