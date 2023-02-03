@@ -1,7 +1,13 @@
-img{
+.img-pokemon {
     padding: 0px;
     height: 180px;
     width: 180px;
+}
+
+
+.img-pokeball {
+    height: 80px;
+    width: 80px;
 }
 
 div {
