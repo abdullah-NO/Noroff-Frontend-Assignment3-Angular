@@ -20,8 +20,6 @@ export class CollectPokemonButtonComponent {
   ) {}
 
   onCollectClick(): void {
-    // Disable button
-
     // Add pokemon to Trainer API and to sessionStorage
     this.pokemonCollectionService.addPokemon(this.pokemonName).subscribe({
       next: (trainer: Trainer) => {},
@@ -29,6 +27,5 @@ export class CollectPokemonButtonComponent {
         console.error('Error: ', error.message);
       },
     });
-    // Change image of list item
   }
 }
