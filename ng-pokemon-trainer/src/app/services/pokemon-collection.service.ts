@@ -20,6 +20,8 @@ export class PokemonCollectionService {
   constructor(private readonly http: HttpClient) {}
 
   public addPokemon(name: string): Observable<Trainer> {
+    // Add pokemon to Trainer API and to sessionStorage
+
     const user = StorageUtil.sessionStorageRead<Trainer>('trainer');
     const headers = new HttpHeaders({
       'content-type': 'application/json',
