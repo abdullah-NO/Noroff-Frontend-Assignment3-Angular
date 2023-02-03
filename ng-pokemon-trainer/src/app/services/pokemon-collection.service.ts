@@ -7,7 +7,6 @@ import { Trainer } from '../models/trainer.model';
 import { StorageUtil } from '../utils/storage.util';
 
 const { apiUsers, apiUsersKey } = environment;
-const user = StorageUtil.sessionStorageRead<Trainer>('trainer');
 
 @Injectable({
   providedIn: 'root',
@@ -23,7 +22,7 @@ export class PokemonCollectionService {
 
   public addPokemon(name: string): Observable<Trainer> {
     // Add pokemon to Trainer API and to sessionStorage
-
+    const user = StorageUtil.sessionStorageRead<Trainer>('trainer');
     const headers = new HttpHeaders({
       'content-type': 'application/json',
       'x-api-key': apiUsersKey,
@@ -53,7 +52,7 @@ export class PokemonCollectionService {
 
   public removePokemon(pokemon: Pokemon): Observable<Trainer> {
     // Remove pokemon from Trainer API and from sessionStorage
-
+    const user = StorageUtil.sessionStorageRead<Trainer>('trainer');
     const headers = new HttpHeaders({
       'content-type': 'application/json',
       'x-api-key': apiUsersKey,
