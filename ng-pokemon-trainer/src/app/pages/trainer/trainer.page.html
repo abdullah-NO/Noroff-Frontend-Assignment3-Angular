@@ -6,6 +6,9 @@
         <div class = "pageTitle">
             <h3 class="pageHeader">Trainer</h3>
         </div>
+        <button class="logoutButton">
+            <span (click)="removeTrainer()" routerLink="/" class="material-icons md-36">logout</span>
+        </button>
     </div>
     <app-pokemon-trainer-list [pokemon]="pokemon"></app-pokemon-trainer-list>
 </main>
