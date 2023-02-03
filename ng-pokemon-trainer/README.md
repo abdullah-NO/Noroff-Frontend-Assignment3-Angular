@@ -9,7 +9,7 @@ you need to download angular cli with `npm install -g @angular/cli`
 you need to have git installed https://git-scm.com/download/win
 
 ## Development server
-run npm install after cloning to include dependecies, this will also make sure that ng commands will run properly.
+run npm install after cloning to include dependencies, this will also make sure that ng commands will run properly.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 # Production server
