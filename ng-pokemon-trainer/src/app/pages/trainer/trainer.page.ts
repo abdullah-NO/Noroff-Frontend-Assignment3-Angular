@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon.model';
-import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.service';
 import { StorageUtil } from 'src/app/utils/storage.util';
 import { Trainer } from 'src/app/models/trainer.model';
 
@@ -17,15 +16,5 @@ export class TrainerPage {
     return pokemonCatalogue.filter(pokemonInstance => sessionTrainer.pokemon.includes(pokemonInstance.name))
   }
 
-  get loading(): boolean {
-    return this.pokemonCatalogueService.loading;
-  }
-
-  get error(): string {
-    return this.pokemonCatalogueService.error;
-  }
-
-  constructor(
-    private readonly pokemonCatalogueService: PokemonCatalogueService
-  ) {}
+  constructor() {}
 }
