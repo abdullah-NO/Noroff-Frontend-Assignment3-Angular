@@ -16,8 +16,5 @@ export class LoginPage {
   handleLogin(): void {
     this.router.navigateByUrl('/catalogue');
   }
-
-  get loading(): boolean {
-    return this.pokemonCatalogueService.loading;
-  }
+  
 }

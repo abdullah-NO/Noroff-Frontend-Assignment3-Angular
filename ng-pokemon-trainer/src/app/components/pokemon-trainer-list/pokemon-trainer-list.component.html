@@ -1,6 +1,6 @@
 <ul class="pokeCatalogue">
     <li class="pokeContainer"*ngFor="let pokeman of pokemon">
-        <button class="removeButton">Release</button>
+        <button (click)="onReleasePokemon()" class="removeButton">Release</button>
         <img [src]="pokeman.img" [alt]="pokeman.name">
             <span>{{ pokeman.name.toUpperCase() }}</span>
     </li>

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon.model';
-import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.service';
 import { StorageUtil } from 'src/app/utils/storage.util';
 import { Trainer } from 'src/app/models/trainer.model';
 
