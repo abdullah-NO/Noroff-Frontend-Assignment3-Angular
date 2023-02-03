@@ -23,7 +23,7 @@ export class LoginFormComponent {
   }
 
   get notLoading(): boolean {
-    return !(this.pokemonCatalogueService.loading || this._loading)
+    return !(this.pokemonCatalogueService.loading || this._loading);
   }
 
   @Output() login: EventEmitter<void> = new EventEmitter();
@@ -43,7 +43,7 @@ export class LoginFormComponent {
         // redirect to catalogue page.
         this.trainerService.trainer = trainer;
         // pokemon catalogue service is being given to session storage once on login.
-        this.pokemonCatalogueService.findPokemonAndSetImage(10, 0);
+        this.pokemonCatalogueService.findPokemonAndSetImage(150, 0);
 
         this.login.emit();
         this._loading = false;
