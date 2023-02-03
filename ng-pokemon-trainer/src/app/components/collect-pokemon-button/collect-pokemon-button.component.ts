@@ -1,6 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
-import { Trainer } from 'src/app/models/trainer.model';
 import { PokemonCollectionService } from 'src/app/services/pokemon-collection.service';
 
 @Component({
@@ -22,7 +21,6 @@ export class CollectPokemonButtonComponent {
   onCollectClick(): void {
     // Add pokemon to Trainer API and to sessionStorage
     this.pokemonCollectionService.addPokemon(this.pokemonName).subscribe({
-      next: (trainer: Trainer) => {},
       error: (error: HttpErrorResponse) => {
         console.error('Error: ', error.message);
       },

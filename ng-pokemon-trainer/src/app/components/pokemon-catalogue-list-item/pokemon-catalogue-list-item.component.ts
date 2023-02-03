@@ -4,11 +4,11 @@ import { Trainer } from 'src/app/models/trainer.model';
 import { StorageUtil } from 'src/app/utils/storage.util';
 
 @Component({
-  selector: 'app-pokemon-list-item',
-  templateUrl: './pokemon-list-item.component.html',
-  styleUrls: ['./pokemon-list-item.component.css'],
+  selector: 'app-pokemon-catalogue-list-item',
+  templateUrl: './pokemon-catalogue-list-item.component.html',
+  styleUrls: ['./pokemon-catalogue-list-item.component.css'],
 })
-export class PokemonListItemComponent {
+export class PokemonCatalogueListItemComponent {
   @Input() pokemon?: Pokemon;
 
   collected(): Boolean {
